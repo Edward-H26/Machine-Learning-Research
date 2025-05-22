@@ -1,0 +1,42 @@
+---
+title: Students Probability
+author: kflan
+editor: areeba, soph
+source: pl-stat100
+videoLink: https://youtu.be/8SORPe9ALLc
+---
+```py generate
+
+c0 = (2/20) * (1/19)
+c0_round = round(c0, 3)
+
+c1 = 1- (8/20) * (7/19) * (6/18)
+c1_mult = round((8/20) * (7/19) * (6/18), 3)
+c1_round = round(c1, 2)
+
+c2 = 1- (10/20) * (9/19) * (8/18)
+c2_mult = round((10/20) * (9/19) * (8/18), 3)
+c2_round = round(c2, 2)
+```
+
+This question pertains to drawing students at random from a class of **10 boys and 10 girls**. **Six of the girls** and **two of the boys are blonde**. The rest of the students not blonde.
+
+Draw one student at random. **What is the probability that the student is either a girl *or* blonde?**
+
+[numeric]{text: 'P(Girl or Blonde):', relativeError: 0.001}
+```py solution
+12/20
+```
+```md explanation
+It can be very helpful to draw a table when doing this problem to organize all of the information given.
+
+There are 8 blondes, 10 girls, and 6 blonde girls. The problem presents us with an *or* statement so we use can use the Addition Rule to calculate the probability. We want to make sure to subtract the probability of getting a blonde girl so we aren't counting them twice. These events are not mutually exclusive. 
+
+P(Girl <b>OR</b> Blonde)<br>
+= P(Girl) + P(Blonde) - P(Blonde Girl)<br>
+= ${10 \over 20}$ + ${8 \over 20}$ - ${6 \over 20}$<br>
+= ${12 \over 20}$<br>
+= <solution>0.6</solution>
+
+Visit [m4-04: Addition Rule](https://discovery.cs.illinois.edu/learn/Prediction-and-Probability/Multi-event-Probability-Addition-Rule/) for reference.
+```
